@@ -1,3 +1,4 @@
+"""TEsting user logins"""
 import logging
 
 from app import db
@@ -5,6 +6,7 @@ from app.db.models import User, Song
 from faker import Faker
 
 def test_adding_user(application):
+    """Testing adding a user"""
     log = logging.getLogger("myApp")
     with application.app_context():
         assert db.session.query(User).count() == 0
